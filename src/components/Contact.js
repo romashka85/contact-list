@@ -48,7 +48,7 @@ const Contact = ({onRouteChange}) => {
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary"
-                    onClick={()=>onRouteChange('editForm')}>
+                    onClick={()=>onRouteChange('editForm', contact)}>
                     View Contact
                   </Button>
                   <Button size="small" color="secondary">Delete Contact</Button>

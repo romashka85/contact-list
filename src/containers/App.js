@@ -13,8 +13,8 @@ class App extends Component {
     }
   }
 
-  onRouteChange = (route) => {
-    this.setState({route: route})
+  onRouteChange = (route, selectedContact) => {
+    this.setState({route: route, selectedContact: selectedContact})
 
   }
 
@@ -37,7 +37,7 @@ class App extends Component {
             <AddForm onRouteChange={this.onRouteChange}/>
             : (
               this.state.route === 'editForm' ?
-              <EditForm />
+              <EditForm selectedContact={this.state.selectedContact}/>
               :
               console.log('Not found')
             )

@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 
-const EditForm = () => {
+const EditForm = ({selectedContact}) => {
   const classes = useStyles();
   
   return (
@@ -44,14 +44,14 @@ const EditForm = () => {
       <TextField
         id="name"
         label="Name"
-        // value = {}
+        value = {selectedContact.name}
         className={classes.textField}
         margin="normal"
       />
       <TextField
         id="email"
         label="Email"
-        // value = {}
+        value = {selectedContact.email}
         className={classes.textField}
         margin="normal"
       />
